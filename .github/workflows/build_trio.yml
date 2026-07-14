@@ -199,6 +199,7 @@ jobs:
           # Remove the "#" sign from the beginning of the line below to activate
           #   and then replace the alphanumeric string with your SHA, this SHA is NOT valid
           curl https://github.com/nightscout/Trio/commit/e546c3a809609f74a9d6d3ee7d8862811a2b51b2.patch | git apply -v --whitespace=fix
+          curl https://github.com/nightscout/Trio/commit/e546c3a809609f74a9d6d3ee7d8862811a2b51b2.patch | git apply -v --whitespace=fix
 
           # Download and apply Submodule patches from GitHub:
           # Template for customizing submodules (you must edit the submodule name)
