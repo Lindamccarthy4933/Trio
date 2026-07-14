@@ -200,7 +200,7 @@ jobs:
           #   and then replace the alphanumeric string with your SHA, this SHA is NOT valid
           curl https://github.com/Lindamccarthy4933/Trio/commit/3d16577c4be527900e8bacf04e21e300d150a7e6.patch | git apply -v --whitespace=fix
           curl https://github.com/Lindamccarthy4933/Trio/commit/f3c3b885e11efd018624a33abac3a5d24f4cb8b5.patch | git apply -v --whitespace=fix
-          curl https://github.com/Lindamccarthy4933/Trio/commit/29cf448924e390ce97a3d1216574ef342050814d.patch | git apply -v --whitespace=fix
+          curl https://github.com/Lindamccarthy4933/Trio/commit/a677c25f2e72a55ca061b0f62f41cfed3fa2e0ba.patch | git apply -v --whitespace=fix
 
           # Download and apply Submodule patches from GitHub:
           # Template for customizing submodules (you must edit the submodule name)
