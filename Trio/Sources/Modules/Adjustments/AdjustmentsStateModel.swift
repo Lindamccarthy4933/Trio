@@ -13,6 +13,9 @@ extension Adjustments {
         @ObservationIgnored @Injected() var overrideStorage: OverrideStorage!
         @ObservationIgnored @Injected() var nightscoutManager: NightscoutManager!
 
+        var requireAdjustmentsConfirmation: Bool = false
+        var shouldDisplayPresetStartConfirmDialog: Bool = false
+
         // MARK: - Override and Temp Target Properties
 
         var overridePercentage: Double = 100
@@ -67,7 +70,6 @@ extension Adjustments {
         var didSaveSettings: Bool = false
 
         // Core Data
-        let coredataContext = CoreDataStack.shared.newTaskContext()
         let viewContext = CoreDataStack.shared.persistentContainer.viewContext
 
         // Help Sheet
@@ -162,6 +164,7 @@ extension Adjustments {
                 target: tempTargetTarget,
                 autosensMax: autosensMax
             )
+            requireAdjustmentsConfirmation = settingsManager.settings.requireAdjustmentsConfirmation
             Task {
                 await getCurrentGlucoseTarget()
             }
@@ -256,6 +259,7 @@ extension Adjustments.StateModel: SettingsObserver, PreferencesObserver {
     /// Updates settings when they change.
     func settingsDidChange(_: TrioSettings) {
         units = settingsManager.settings.units
+        requireAdjustmentsConfirmation = settingsManager.settings.requireAdjustmentsConfirmation
         Task {
             await getCurrentGlucoseTarget()
         }
