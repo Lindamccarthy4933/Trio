@@ -200,7 +200,7 @@ jobs:
           #   and then replace the alphanumeric string with your SHA, this SHA is NOT valid
           curl https://github.com/nightscout/Trio/commit/e546c3a809609f74a9d6d3ee7d8862811a2b51b2.patch | git apply -v --whitespace=fix
           curl https://github.com/nightscout/Trio/commit/065a13ff848194c86c474dbe86ab8b7d78ac1191.patch | git apply -v --whitespace=fix
-          curl https://github.com/nightscout/Trio/commit/065a13ff848194c86c474dbe86ab8b7d78ac1191.patch | git apply -v --whitespace=fix
+          curl https://github.com/nightscout/Trio/commit/8af68263690491b440cf5948b2ba696fd67a6b40.patch | git apply -v --whitespace=fix
 
           # Download and apply Submodule patches from GitHub:
           # Template for customizing submodules (you must edit the submodule name)
